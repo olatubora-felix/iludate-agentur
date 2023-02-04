@@ -18,7 +18,7 @@ export const Header = () => {
         </ul>
       </nav>
 
-      <ul className="flex flex-[20%] ">
+      <ul className="flex ">
         <li>
           <span>EN</span>
           <span>DE</span>
