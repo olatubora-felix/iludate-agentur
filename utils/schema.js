@@ -12,6 +12,7 @@ export const login = Yup.object({
 });
 
 export const register = Yup.object({
+  name: Yup.string().trim().required("The name field is required"),
   email: Yup.string()
     .trim()
     .required("The email field is required")

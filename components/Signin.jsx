@@ -64,7 +64,7 @@ export const Signin = () => {
           </span>
           <Button
             fullWidth
-            className="bg-red-900 rounded-full pt-1 pb-1 mt-[2rem] normal-case"
+            className="bg-red-900 rounded-full pt-1 pb-1 mt-[2rem] normal-case hover:shadow-none shadow-none"
             type="submit"
           >
             Log in
@@ -75,13 +75,15 @@ export const Signin = () => {
             or
           </p>
         </div>
-        <Button
-          fullWidth
-          variant="outlined"
-          className="rounded-full border-red-900 text-red-900 normal-case font-light pt-1 pb-1 mb-[2rem]"
-        >
-          Register now
-        </Button>
+        <Link href="/register">
+          <Button
+            fullWidth
+            variant="outlined"
+            className="rounded-full border-red-900 text-red-900 normal-case font-light pt-1 pb-1 mb-[2rem] hover:shadow-none shadow-none"
+          >
+            Register now
+          </Button>
+        </Link>
       </div>
     </main>
   );
