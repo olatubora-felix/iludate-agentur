@@ -2,10 +2,9 @@ import { login } from "@/utils/schema";
 import { ShowToast } from "@/utils/tools";
 import { Button } from "@material-tailwind/react";
 import { useFormik } from "formik";
-import Link from "next/link";
 import React, { useState } from "react";
 
-export const Signin = () => {
+export const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const formik = useFormik({
@@ -53,9 +52,7 @@ export const Signin = () => {
         <div className="my-4 before:border-t flex before:flex-1 items-center before:border-[#aaa] after:border-t after:flex-1  after:border-[#aaa]">
           <p className="text-center font-semibold mx-4">or</p>
         </div>
-        <Link href="/register">
-          <Button>Register now</Button>
-        </Link>
+        <Button>Register now</Button>
       </div>
     </main>
   );
