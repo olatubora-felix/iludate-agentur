@@ -1,6 +1,12 @@
 import { createProfile } from "@/utils/schema";
 import { ShowToast } from "@/utils/tools";
-import { Button, Input, Option, Select } from "@material-tailwind/react";
+import {
+  Button,
+  Input,
+  Option,
+  Select,
+  Textarea,
+} from "@material-tailwind/react";
 import { useFormik } from "formik";
 import React, { useState } from "react";
 import { FiCamera } from "react-icons/fi";
@@ -143,18 +149,160 @@ export const Profile = () => {
               <div className="text-red-500">{formik.errors.nationality}</div>
             )}
           </div>
+
           <div>
             <Input
               variant="standard"
-              placeholder="nationality"
+              placeholder="height"
               type="text"
-              name="nationality"
-              {...formik.getFieldProps("nationality")}
+              name="height"
+              {...formik.getFieldProps("height")}
             />
-            {formik.touched.nationality && formik.errors.nationality && (
-              <div className="text-red-500">{formik.errors.nationality}</div>
+            {formik.touched.height && formik.errors.height && (
+              <div className="text-red-500">{formik.errors.height}</div>
             )}
           </div>
+          <div>
+            <Input
+              variant="standard"
+              placeholder="weight"
+              type="text"
+              name="weight"
+              {...formik.getFieldProps("weight")}
+            />
+            {formik.touched.weight && formik.errors.weight && (
+              <div className="text-red-500">{formik.errors.weight}</div>
+            )}
+          </div>
+          <div>
+            <Input
+              variant="standard"
+              placeholder="hairColor"
+              type="text"
+              name="hairColor"
+              {...formik.getFieldProps("hairColor")}
+            />
+            {formik.touched.hairColor && formik.errors.hairColor && (
+              <div className="text-red-500">{formik.errors.hairColor}</div>
+            )}
+          </div>
+          <div>
+            <Input
+              variant="standard"
+              placeholder="country"
+              type="text"
+              name="country"
+              {...formik.getFieldProps("country")}
+            />
+            {formik.touched.country && formik.errors.country && (
+              <div className="text-red-500">{formik.errors.country}</div>
+            )}
+          </div>
+
+          <div>
+            <Input
+              variant="standard"
+              placeholder="city"
+              type="text"
+              name="city"
+              {...formik.getFieldProps("city")}
+            />
+            {formik.touched.city && formik.errors.city && (
+              <div className="text-red-500">{formik.errors.city}</div>
+            )}
+          </div>
+
+          <div>
+            <Input
+              variant="standard"
+              placeholder="languages"
+              type="text"
+              name="languages"
+              {...formik.getFieldProps("languages")}
+            />
+            {formik.touched.languages && formik.errors.languages && (
+              <div className="text-red-500">{formik.errors.languages}</div>
+            )}
+          </div>
+
+          <div>
+            <Input
+              variant="standard"
+              placeholder="smoker"
+              type="text"
+              name="smoker"
+              {...formik.getFieldProps("smoker")}
+            />
+            {formik.touched.smoker && formik.errors.smoker && (
+              <div className="text-red-500">{formik.errors.smoker}</div>
+            )}
+          </div>
+
+          <div>
+            <Input
+              variant="standard"
+              placeholder="profession"
+              type="text"
+              name="profession"
+              {...formik.getFieldProps("profession")}
+            />
+            {formik.touched.profession && formik.errors.profession && (
+              <div className="text-red-500">{formik.errors.profession}</div>
+            )}
+          </div>
+          <div>
+            <Input
+              variant="standard"
+              placeholder="hobbies"
+              type="text"
+              name="hobbies"
+              {...formik.getFieldProps("hobbies")}
+            />
+            {formik.touched.hobbies && formik.errors.hobbies && (
+              <div className="text-red-500">{formik.errors.hobbies}</div>
+            )}
+          </div>
+
+          <div>
+            <Input
+              variant="standard"
+              placeholder="hashtag"
+              type="text"
+              name="hashtag"
+              {...formik.getFieldProps("hashtag")}
+            />
+            {formik.touched.hashtag && formik.errors.hashtag && (
+              <div className="text-red-500">{formik.errors.hashtag}</div>
+            )}
+          </div>
+
+          <div>
+            <Input
+              variant="standard"
+              placeholder="covid"
+              type="text"
+              name="covid"
+              {...formik.getFieldProps("covid")}
+            />
+            {formik.touched.covid && formik.errors.covid && (
+              <div className="text-red-500">{formik.errors.covid}</div>
+            )}
+          </div>
+
+          <div>
+            <Textarea
+              label="message"
+              variant="outlined"
+              placeholder="message"
+              type="text"
+              name="message"
+              {...formik.getFieldProps("message")}
+            />
+            {formik.touched.message && formik.errors.message && (
+              <div className="text-red-500">{formik.errors.message}</div>
+            )}
+          </div>
+
           <div>
             <Button type="submit" className="mt-4">
               Send for verification
