@@ -18,7 +18,7 @@ export default function Home() {
         <h2 className="font-semibold italic text-pink-400 mb-2">
           Let's get started
         </h2>
-        <Button className="rounded-full bg-pink-600 px-20" size="lg">
+        <Button className="rounded-full bg-pink-600 px-20 " size="lg">
           Hello
         </Button>
       </main>
