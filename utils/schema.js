@@ -35,9 +35,11 @@ export const createProfile = Yup.object({
   firstname: Yup.string().trim().required("firstname field is required"),
   lastname: Yup.string().trim().required("lastname field is required"),
   gender: Yup.string().trim().required("Gender field is required"),
-  age: Yup.number()
+  age: Yup.string()
+    .trim()
     .required("age field is required")
     .min(18, "You should be at least 18 years of age"),
+  birthday: Yup.string().trim().required("birthday field is required"),
   nationality: Yup.string().trim().required("Nationality field is required"),
   height: Yup.string().trim().required("height field is required"),
   weight: Yup.string().trim().required("weight field is required"),
