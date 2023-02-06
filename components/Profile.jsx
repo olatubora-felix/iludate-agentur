@@ -19,7 +19,7 @@ export const Profile = () => {
       firstname: "",
       lastname: "",
       images: [],
-      age: "",
+      age: 0,
       gender: "",
       nationality: "",
       height: "",
@@ -35,7 +35,6 @@ export const Profile = () => {
       covid: "",
       hashtag: "",
       message: "",
-      birthday: "",
     },
     validationSchema: createProfile,
     onSubmit: (values) => {
@@ -58,33 +57,26 @@ export const Profile = () => {
     console.log(values, "form");
   };
   return (
-    <main className="w-full flex flex-col items-center justify-center mt-12">
-      <h2 className="text-2xl text-red-900 uppercase font-serif font-bold">
-        Iludate &mdash; Agentur
-      </h2>
+    <main className="w-full flex flex-col items-center justify-center mt-24">
+      <h2 className="text-3xl">Iludate &mdash; Agentur</h2>
       <div>
-        <h1 className="text-yellow-600 font-serif uppercase text-center pt-[2rem]">
-          Create Profile
-        </h1>
-        <p className="text-gray-500 text-sm text-center pb-[2rem] font-sans">
-          Welcome to Illudate Agentur
-        </p>
+        <h1>Create Profile</h1>
+        <p>Welcome to Illudate Agentur</p>
         <form onSubmit={formik.handleSubmit}>
-          <div className="mt-6 flex flex-col justify-center items-center">
+          <div className="mt-10">
             <label
               htmlFor="images"
               className="flex flex-col items-center justify-center bg-gray-300 h-[10rem] w-[14rem] cursor-pointer"
             >
               <FiCamera className="text-2xl text-blue-gray-200" />
               <span className="text-center">
-                Drop your images here or{" "}
-                <strong className="text-red-900">browse</strong>
+                Drop your images here or browse
               </span>
               <input
                 type="file"
                 id="images"
                 onChange={handlePicValue}
-                accept=".jpg.png,.jpeg"
+                accept=".jpg,.png,.jpeg"
                 multiple
                 className="hidden"
                 name="images"
@@ -93,17 +85,11 @@ export const Profile = () => {
                 <div className="text-red-500">{formik.errors.images}</div>
               )}
             </label>
-            <span className="text-gray-500 text-xs font-sans mt-2">
-              Please upload at least 4 photos
-            </span>
-            <span className="text-gray-500 text-xs font-sans">
-              max 8 photos
-            </span>
           </div>
           <div>
             <Input
               variant="standard"
-              placeholder="Firstname"
+              placeholder="firstname"
               type="text"
               name="firstname"
               {...formik.getFieldProps("firstname")}
@@ -115,7 +101,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Lastname"
+              placeholder="lastname"
               type="text"
               name="lastname"
               {...formik.getFieldProps("lastname")}
@@ -127,26 +113,13 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Age"
-              type="text"
+              placeholder="age"
+              type="number"
               name="age"
               {...formik.getFieldProps("age")}
             />
             {formik.touched.age && formik.errors.age && (
               <div className="text-red-500">{formik.errors.age}</div>
-            )}
-          </div>
-
-          <div>
-            <Input
-              type="date"
-              variant="standard"
-              placeholder="Birthday"
-              name="birthday"
-              {...formik.getFieldProps("birthday")}
-            />
-            {formik.touched.birthday && formik.errors.birthday && (
-              <div className="text-red-500">{formik.errors.birthday}</div>
             )}
           </div>
           <div className="mt-2">
@@ -167,7 +140,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Nationality"
+              placeholder="nationality"
               type="text"
               name="nationality"
               {...formik.getFieldProps("nationality")}
@@ -180,7 +153,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Height"
+              placeholder="height"
               type="text"
               name="height"
               {...formik.getFieldProps("height")}
@@ -192,7 +165,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Weight"
+              placeholder="weight"
               type="text"
               name="weight"
               {...formik.getFieldProps("weight")}
@@ -204,7 +177,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="HairColor"
+              placeholder="hairColor"
               type="text"
               name="hairColor"
               {...formik.getFieldProps("hairColor")}
@@ -216,7 +189,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Country"
+              placeholder="country"
               type="text"
               name="country"
               {...formik.getFieldProps("country")}
@@ -229,7 +202,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="City"
+              placeholder="city"
               type="text"
               name="city"
               {...formik.getFieldProps("city")}
@@ -242,7 +215,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Languages"
+              placeholder="languages"
               type="text"
               name="languages"
               {...formik.getFieldProps("languages")}
@@ -255,7 +228,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Smoker"
+              placeholder="smoker"
               type="text"
               name="smoker"
               {...formik.getFieldProps("smoker")}
@@ -268,7 +241,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Profession"
+              placeholder="profession"
               type="text"
               name="profession"
               {...formik.getFieldProps("profession")}
@@ -280,7 +253,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Hobbies"
+              placeholder="hobbies"
               type="text"
               name="hobbies"
               {...formik.getFieldProps("hobbies")}
@@ -293,7 +266,7 @@ export const Profile = () => {
           <div>
             <Input
               variant="standard"
-              placeholder="Hashtag"
+              placeholder="hashtag"
               type="text"
               name="hashtag"
               {...formik.getFieldProps("hashtag")}
@@ -303,24 +276,24 @@ export const Profile = () => {
             )}
           </div>
 
-          <div className="mt-2">
-            <Select
+          <div>
+            <Input
               variant="standard"
-              id=""
+              placeholder="covid"
+              type="text"
               name="covid"
-              label="Covid"
-              value={formik.values.covid}
               {...formik.getFieldProps("covid")}
-            >
-              <Option value="vaccinated">Vaccinated</Option>
-              <Option value="notVaccinated">Not Vaccinated</Option>
-            </Select>
+            />
+            {formik.touched.covid && formik.errors.covid && (
+              <div className="text-red-500">{formik.errors.covid}</div>
+            )}
           </div>
 
-          <div className="mt-3">
+          <div>
             <Textarea
+              label="message"
               variant="outlined"
-              placeholder="My Experiences"
+              placeholder="message"
               type="text"
               name="message"
               {...formik.getFieldProps("message")}
@@ -330,18 +303,11 @@ export const Profile = () => {
             )}
           </div>
 
-          <div className="my-4 flex flex-1-auto gap-2">
-            <Button
-              type="submit"
-              className="bg-red-900 rounded-full pt-1 pb-1 normal-case hover:shadow-none shadow-none"
-            >
+          <div>
+            <Button type="submit" className="mt-4">
               Send for verification
             </Button>
-            <Button
-              type="button"
-              variant="outlined"
-              className="rounded-full border-red-900 text-red-900 normal-case font-light pt-1 pb-1 hover:shadow-none shadow-none"
-            >
+            <Button type="button" className="mt-4">
               Save
             </Button>
           </div>
