@@ -335,7 +335,7 @@ export const Profile = () => {
               type="submit"
               className="bg-red-900 rounded-full pt-1 pb-1 normal-case hover:shadow-none shadow-none"
             >
-              Send for verification
+              Send for verifications
             </Button>
             <Button
               type="button"
