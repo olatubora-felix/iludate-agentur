@@ -1,7 +1,8 @@
 import { register } from "@/utils/schema";
 import { ShowToast } from "@/utils/tools";
-import { Button, Input } from "@material-tailwind/react";
+import { Button, Checkbox, Input } from "@material-tailwind/react";
 import { useFormik } from "formik";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export const Signup = () => {
@@ -23,6 +24,7 @@ export const Signup = () => {
     },
   });
 
+  console.log(formik.values.role);
   return (
     <main className="w-full flex flex-col items-center justify-center mt-12">
       <h1 className="text-2xl text-red-900 uppercase font-serif font-bold">
@@ -132,6 +134,19 @@ export const Signup = () => {
               placeholder="Invitation code"
             />
           </div>
+
+          {formik.values.role === "model" && (
+            <div>
+              <Checkbox />I know about
+              <Link href="/terms">books on date law</Link>
+            </div>
+          )}
+          {formik.values.role === "model" && (
+            <div>
+              <Checkbox />I accept <Link href="/terms">general conditions</Link>
+            </div>
+          )}
+
           <Button
             fullWidth
             className="bg-red-900 rounded-full pt-1 pb-1 mt-2 mb-[2rem] normal-case hover:shadow-none shadow-none"
