@@ -2,12 +2,12 @@ import React, { Fragment } from 'react'
 import { Header } from './Header'
 import { HeadHtml } from '../head/Head'
 
-const MainLayout = ({ content, children, title }) => {
+const MainLayout = ({ content, children, title, className }) => {
   return (
     <Fragment>
       <HeadHtml content={content} title={title} />
       <Header />
-      {children}
+      <main className={className}>{children}</main>
     </Fragment>
   )
 }

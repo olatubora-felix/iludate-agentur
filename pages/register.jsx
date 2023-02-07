@@ -1,9 +1,14 @@
 import { Signup } from '@/components/auth/Signup'
 import React from 'react'
+import MainLayout from '@/components/layouts/MainLayout'
 
 export default function signin() {
   return (
-    <main className="lg:w-[40%] w-full mx-auto pt-24 px-4 pb-4">
+    <MainLayout
+      content={'A modeling and hotees site'}
+      title="SignUp Page"
+      className="lg:w-[40%] w-full mx-auto pt-24 px-4 pb-4"
+    >
       <h1 className="text-2xl text-red-900 uppercase font-serif font-bold text-center">
         Iludate &mdash; Agentur
       </h1>
@@ -14,6 +19,6 @@ export default function signin() {
         Welcome to Illudate Agentur
       </p>
       <Signup />
-    </main>
+    </MainLayout>
   )
 }
