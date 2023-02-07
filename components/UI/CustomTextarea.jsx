@@ -1,7 +1,7 @@
 import React from 'react'
-import { Input } from '@material-tailwind/react'
+import { Input, Textarea } from '@material-tailwind/react'
 
-export const CustomInput = ({
+export const CustomTextarea = ({
   className,
   variant,
   type,
@@ -10,11 +10,10 @@ export const CustomInput = ({
   error,
   text,
   label,
-  blur,
 }) => {
   return (
     <div className="my-6">
-      <Input
+      <Textarea
         className={`${className} text-xl`}
         variant={variant}
         type={type}
@@ -24,8 +23,7 @@ export const CustomInput = ({
         label={label}
         autoComplete="off"
       />
-
-      {blur && error && <span className="text-red-500 py-4">{error}</span>}
+      {error && <p className="text-red-500 py-4">{error}</p>}
     </div>
   )
 }
