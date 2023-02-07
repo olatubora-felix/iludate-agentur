@@ -76,6 +76,7 @@ export const Signup = () => {
           error={formik.errors.name}
           text={'name'}
           label="Name"
+          blur={formik.touched.name}
           type={'text'}
         />
         <CustomInput
@@ -86,6 +87,7 @@ export const Signup = () => {
           error={formik.errors.email}
           text={'email'}
           label="Email"
+          blur={formik.touched.email}
           type={'email'}
         />
         <CustomInput
@@ -94,6 +96,7 @@ export const Signup = () => {
           name="confirmEmail"
           formik={formik}
           error={formik.errors.confirmEmail}
+          blur={formik.touched.confirmEmail}
           text={'confirmEmail'}
           label="Confirm email address"
           type={'email'}
@@ -104,6 +107,7 @@ export const Signup = () => {
           name="password"
           formik={formik}
           error={formik.errors.password}
+          blur={formik.touched.password}
           text={'password'}
           label="Password"
           type={'password'}
@@ -114,6 +118,7 @@ export const Signup = () => {
           name="confirmPassword"
           formik={formik}
           error={formik.errors.confirmPassword}
+          blur={formik.touched.confirmPassword}
           text={'confirmPassword'}
           label="Confirm password"
           type={'password'}
