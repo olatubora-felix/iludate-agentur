@@ -10,6 +10,7 @@ import CustomButton from '../UI/CustomButton'
 import { CustomInput } from '../UI/CustomInput'
 import { CustomForm } from '../UI/CustomForm'
 import { Hr } from './Hr'
+import Router from 'next/router'
 
 export const Signin = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -21,7 +22,9 @@ export const Signin = () => {
     },
     validationSchema: login,
     onSubmit: (values) => {
-      console.log(values)
+      if (values !== '') {
+        Router.push('/create-profile')
+      }
       ShowToast('SUCCESS', 'Login successfully')
     },
   })

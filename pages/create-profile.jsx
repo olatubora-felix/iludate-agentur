@@ -26,9 +26,9 @@ export default function CreateProfile() {
     <MainLayout
       title="Create user profile"
       content={'A modeling and hotees site'}
-      className="mx-auto lg:w-[60%] w-full p-4"
+      className="mx-auto lg:w-[60%] w-full py-20 px-4"
     >
-      <h2 className="text-2xl text-red-900 uppercase font-serif font-bold">
+      <h2 className="text-2xl text-red-900 uppercase font-serif font-bold text-center">
         Iludate &mdash; Agentur
       </h2>
       <h1 className="text-yellow-600 font-serif uppercase text-center pt-[2rem]">
