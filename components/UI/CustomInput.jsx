@@ -10,6 +10,7 @@ export const CustomInput = ({
   error,
   text,
   label,
+  blur,
 }) => {
   return (
     <div className="my-6">
@@ -23,7 +24,8 @@ export const CustomInput = ({
         label={label}
         autoComplete="off"
       />
-      {error && <p className="text-red-500 py-4">{error}</p>}
+
+      {blur && error && <span className="text-red-500 py-4">{error}</span>}
     </div>
   )
 }

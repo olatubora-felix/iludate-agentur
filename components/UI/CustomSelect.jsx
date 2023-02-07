@@ -27,7 +27,7 @@ export const CustomSelect = ({
               variant="standard"
             >
               {countries?.map((option) => (
-                <Option value={option?.name?.toLowerCase()}>
+                <Option value={option?.name?.toLowerCase()} key={option?.name}>
                   {option?.name}
                 </Option>
               ))}
@@ -45,7 +45,9 @@ export const CustomSelect = ({
               variant="standard"
             >
               {options.map((option) => (
-                <Option value={option.value}>{option.label}</Option>
+                <Option value={option.value} key={option.value}>
+                  {option.label}
+                </Option>
               ))}
             </Select>
           )}
@@ -60,7 +62,9 @@ export const CustomSelect = ({
           label={label}
         >
           {options.map((option) => (
-            <option value={option.value}>{option.label}</option>
+            <option value={option.value} key={option.value}>
+              {option.label}
+            </option>
           ))}
         </select>
       )}
