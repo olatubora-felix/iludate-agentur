@@ -27,10 +27,7 @@ export const Signin = () => {
   })
   return (
     <Fragment>
-      <CustomForm
-        onSubmit={formik.handleSubmit}
-        className="lg:w-[400px] w-full"
-      >
+      <CustomForm onSubmit={formik.handleSubmit} className="">
         <CustomInput
           className={'pt-1 pb-1 w-full'}
           variant="standard"
@@ -52,7 +49,7 @@ export const Signin = () => {
         />
         <Link
           href={'#'}
-          className="flex justify-end  font-medium text-xl text-gray-500 mt-2"
+          className="flex justify-end  font-medium text-lg text-gray-500 mt-2"
         >
           Forgot Password
         </Link>

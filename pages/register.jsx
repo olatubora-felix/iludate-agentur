@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function signin() {
   return (
-    <main className="lg:w-[40%] w-full mx-auto p-4">
+    <main className="lg:w-[40%] w-full mx-auto pt-24 px-4 pb-4">
       <h1 className="text-2xl text-red-900 uppercase font-serif font-bold text-center">
         Iludate &mdash; Agentur
       </h1>
