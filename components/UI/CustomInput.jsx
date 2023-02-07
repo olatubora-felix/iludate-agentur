@@ -8,7 +8,7 @@ export const CustomInput = ({
   name,
   placeholder,
   formik,
-  error,
+  // error,
   text,
   label,
 }) => {
@@ -24,7 +24,7 @@ export const CustomInput = ({
         label={label}
         autoComplete="off"
       />
-      {error && <p className="text-red-500 py-4">{error}</p>}
+      {/* {error && <p className="text-red-500 py-4">{error}</p>} */}
     </div>
   )
 }
