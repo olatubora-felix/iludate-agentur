@@ -1,12 +1,11 @@
-import { Header } from "@/components/Header";
-import "@/styles/globals.css";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Header } from '@/components/layouts/Header'
+import '@/styles/globals.css'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function App({ Component, pageProps }) {
   return (
     <div>
-      <Header />
       <Component {...pageProps} />
       <ToastContainer
         position="bottom-right"
@@ -21,5 +20,5 @@ export default function App({ Component, pageProps }) {
         theme="dark"
       />
     </div>
-  );
+  )
 }
