@@ -37,6 +37,9 @@ export const Signin = () => {
           text={'email'}
           label="Email"
         />
+        {formik.touched.email && formik.errors.email && (
+          <span className="text-red-500 py-4">{formik.errors.email}</span>
+        )}
         <CustomInput
           className={'pt-1 pb-1 w-full'}
           variant="standard"
@@ -47,6 +50,9 @@ export const Signin = () => {
           text={'password'}
           label="Password"
         />
+        {formik.touched.password && formik.errors.password && (
+          <span className="text-red-500 py-4">{formik.errors.password}</span>
+        )}
         <Link
           href={'#'}
           className="flex justify-end  font-medium text-lg text-gray-500 mt-2"
