@@ -16,17 +16,17 @@ export const Vcard = () => {
           <div className="flex flex-col justify-center items-center">
             <RxInstagramLogo className="text-white bg-red-900 rounded-full text-[1.5rem] p-[0.2rem]" />
             <p className="text-[0.7rem] font-semibold">Instagram</p>
-            <span className="text-[0.6rem] font-light">username</span>
+            <span className="text-[0.6rem] font-light">@emer_uu</span>
           </div>
           <div className="flex flex-col justify-center items-center">
             <ImFacebook className="text-white bg-red-900 rounded-full text-[1.5rem] p-[0.2rem]" />
             <p className="text-[0.7rem] font-semibold">Facebook</p>
-            <span className="text-[0.6rem] font-light">username</span>
+            <span className="text-[0.6rem] font-light">Emery Muller</span>
           </div>
           <div className="flex flex-col justify-center items-center">
             <BsSnapchat className="text-white bg-red-900 rounded-full text-[1.5rem] p-[0.2rem]" />
             <p className="text-[0.7rem] font-semibold">Snapchat</p>
-            <span className="text-[0.6rem] font-light">username</span>
+            <span className="text-[0.6rem] font-light">@emer_uu</span>
           </div>
         </div>
       </section>
@@ -45,7 +45,7 @@ export const Vcard = () => {
           <p className="font-semibold col-span-2">0000 123-123 123 45</p>
 
           <span className="text-xs col-span-2">Email Address</span>
-          <p className="font-semibold col-span-2">emerber@gmail.com</p>
+          <p className="font-semibold col-span-2">emerymodel@gmail.com</p>
         </div>
       </section>
     </div>
