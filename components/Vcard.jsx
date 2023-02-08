@@ -3,14 +3,16 @@ import { RxInstagramLogo } from 'react-icons/rx'
 import { ImFacebook } from 'react-icons/im'
 import { BsSnapchat } from 'react-icons/bs'
 
+//flex flex-col md:flex-row sm:justify-center items-center sm:items-start border border-gray-200 mt-40 space-x-5 py-16 px-8 w-full
+
 export const Vcard = () => {
   return (
-    <main className="flex-col justify-center border-[1px] border-gray-500 p-6 max-w-[60%] min-h-[50vh] flex sm:flex-row items-center gap-6 m-auto my-[5rem]">
-      <section className="w-[55%]">
-        <h1 className="text-2xl text-red-900 uppercase font-serif font-bold mb-8">
+    <div className="flex py-8 px-4 flex-col justify-center items-center  mt-20 sm:flex-row sm:items-start border border-gray-200 max-w-lg sm:py-8 sm:px-4 mx-auto">
+      <section className="flex flex-col justify-between  sm:space-y-7">
+        <h1 className="text-2xl text-red-900 uppercase font-serif font-bold mb-8 whitespace-nowrap">
           Iludate-Agentur
         </h1>
-        <div className="flex items-center gap-3">
+        <div className="flex mb-4  items-center justify-center gap-3 sm:justify-start sm:mb-0">
           <div className="flex flex-col justify-center items-center">
             <RxInstagramLogo className="text-white bg-red-900 rounded-full text-[1.5rem] p-[0.2rem]" />
             <p className="text-[0.7rem] font-semibold">Instagram</p>
@@ -28,9 +30,9 @@ export const Vcard = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div className="grid grid-cols-2 justify-items-start">
-          <div>
+      <section className="px-8 ">
+        <div className="grid grid-cols-2 justify-items-center sm:justify-items-start">
+          <div className="mb-4">
             <span className="text-xs">Name</span>
             <h2 className="uppercase font-semibold">Emery</h2>
           </div>
@@ -38,16 +40,14 @@ export const Vcard = () => {
             <span className="text-xs">Surname</span>
             <h2 className="uppercase font-semibold">Muller</h2>
           </div>
-          <div className="col-span-2">
-            <span className="text-xs">Phone number</span>
-            <p className="font-semibold">0000 123-123 123 45</p>
-          </div>
-          <div className="col-span-2">
-            <span className="text-xs">Email Address</span>
-            <p className="font-semibold">emerymodel@gmail.com</p>
-          </div>
+
+          <span className="text-xs col-span-2">Phone number</span>
+          <p className="font-semibold col-span-2">0000 123-123 123 45</p>
+
+          <span className="text-xs col-span-2">Email Address</span>
+          <p className="font-semibold col-span-2">emerber@gmail.com</p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
