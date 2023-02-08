@@ -10,6 +10,7 @@ import CustomButton from '../UI/CustomButton'
 import { CustomInput } from '../UI/CustomInput'
 import { CustomForm } from '../UI/CustomForm'
 import { Hr } from './Hr'
+import Router from 'next/router'
 
 export const Signin = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -21,16 +22,15 @@ export const Signin = () => {
     },
     validationSchema: login,
     onSubmit: (values) => {
-      console.log(values)
+      if (values !== '') {
+        Router.push('/create-profile')
+      }
       ShowToast('SUCCESS', 'Login successfully')
     },
   })
   return (
     <Fragment>
-      <CustomForm
-        onSubmit={formik.handleSubmit}
-        className="lg:w-[400px] w-full"
-      >
+      <CustomForm onSubmit={formik.handleSubmit} className="">
         <CustomInput
           className={'pt-1 pb-1 w-full'}
           variant="standard"
@@ -39,7 +39,9 @@ export const Signin = () => {
           error={formik.errors.email}
           text={'email'}
           label="Email"
+          blur={formik.touched.email}
         />
+
         <CustomInput
           className={'pt-1 pb-1 w-full'}
           variant="standard"
@@ -47,12 +49,14 @@ export const Signin = () => {
           placeholder="Password"
           formik={formik}
           error={formik.errors.password}
+          blur={formik.touched.password}
           text={'password'}
           label="Password"
         />
+
         <Link
           href={'#'}
-          className="flex justify-end  font-medium text-xl text-gray-500 mt-2"
+          className="flex justify-end  font-medium text-lg text-gray-500 mt-2"
         >
           Forgot Password
         </Link>
