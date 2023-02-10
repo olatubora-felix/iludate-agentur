@@ -1,17 +1,23 @@
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify'
 
 export const ShowToast = (type, msg) => {
   switch (type) {
-    case "SUCCESS":
-      toast.success(msg, {});
-      break;
-    case "ERROR":
+    case 'SUCCESS':
+      toast.success(msg, {})
+      break
+    case 'ERROR':
       toast.error(msg, {
         position: toast.POSITION.BOTTOM_RIGHT,
-      });
-      break;
+      })
+      break
 
     default:
-      return false;
+      return false
   }
-};
+}
+
+export const errorHelper = (formik, value) => ({
+  error: formik.errors[value] && formik.touched[value] ? true : false,
+  helperText:
+    formik.errors[value] && formik.touched[value] ? formik.errors[value] : null,
+})
